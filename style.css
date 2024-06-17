@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
+}
+
+.container
+{
+    width: 100%;
+    height: 100vh;
+  background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* border: 10px solid red; */
+    
+}
+
+.calculator{
+    background: #000000;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    /* box-shadow: -8px -8px 15px rgba(255 , 255 ,255 ,0.1), 5px 5px 15px rgba(0 , 0 , 0 , 0.2); */
+    background: rgb(251, 254, 252);
+    font-size: 20px;
+    color: #d5480c ;
+    cursor: pointer;
+    margin: 10px;
+}
+
+form .display
+{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+
+form input.equal
+{
+    width: 145px;
+}
+
+form input.operator{
+    color: #3a1111;
+    background-color: #869d9e;
+}
+
+
+
+#checkbox
+{
+    visibility: hidden;
+}
+
+
+  .toggle-btn{
+ 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+       
+    }
+
+
+.toggle-label{
+    width: 4rem;
+    height: 2rem;
+    background-color: #010102;
+    display: inline-block;
+    position: relative;
+    border-radius: 10rem;
+}
+.toggle-ball
+{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #929ea2;
+    display: inline-block;
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    transition: all .2s linear;
+}
+
+#checkbox:checked + .toggle-label .toggle-ball
+{
+    transform: translateX(2rem);
+    background-color: #080b0c;
+   
+}
+
+
+
+
+/* body.dark-mode {
+    background-color: black;
+    color: rgb(190, 30, 30);
+}
+
+.container.dark-mode {
+    background-color: #1a1a1a;
+    border-color: #444;
+    color: white;
+}
+
+body.dark-mode button, body.dark-mode input {
+    background-color: rgb(132, 185, 42);
+    color: rgb(37, 37, 255);
+    border-color: rgb(195, 17, 17);
+} 
+  */
+
+  .container.dark-mode {
+    background-color: black;
+    border-color: #0a0505;
+    color: white;
+}
+
+  .container.dark-mode .calculator {
+    background-color: #d7e0e7;
+    border-color: #555;
+}
+
+.container.dark-mode .calculator .display input {
+    background-color: #222;
+    color: white;
+}
+
+.container.dark-mode .calculator input[type="button"] {
+    background-color: #f8ecec;
+    color: rgb(56, 30, 160);
+    border-color: #000000;
+    box-shadow: -8px -8px 15px rgba(114, 115, 189, 0.1), 5px 5px 15px rgba(212, 193, 229, 0.2);
+}
+
+.container.dark-mode .calculator input.operator {
+    background-color: #4e0a7e;
+    color: #77f915; /* Dark mode color for operators */
+}
+
+.container.dark-mode .toggle-label
+{
+    background-color:  #d7e0e7;
+}
